@@ -3,7 +3,8 @@ import {useContext} from "react"
 import { DataContext } from './context/DataContext'
 
 function Gallery(){
-    const data = useContext(DataContext)
+    const importData = useContext(DataContext)
+    const data = importData.result.read()
 
     const display = data.map((item,index) => {
         return (
